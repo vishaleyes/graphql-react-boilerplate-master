@@ -1,0 +1,15 @@
+module.exports =  `type User {
+    id: String
+    name: String
+    job_title: String
+    email: String
+  }
+  type Query {
+    getUsers: [User],
+    getUserInfo(id: Int) : User
+  }
+  type Mutation {
+    updateUserInfo(id: Int, name: String, email: String, job_title: String) : Boolean
+    createUser(name: String, email: String, job_title: String) : Boolean
+    deleteUser(id: Int) : Boolean
+  }`
